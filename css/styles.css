@@ -9,7 +9,7 @@
     --border-portfolio-color: #EEEEEE;
     --hero-alt-background-color: #C4C4C4;
     --icon-grey-color: rgba(175, 177, 184, 1);
-    --transition-dur-and-func: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 h1,h2,h3,h4,p {
     margin-top: 0;
@@ -225,11 +225,13 @@ transition: background-color var(--transition-dur-and-func);
 .hero {
   background: var(--hero-alt-background-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background.jpg);
-  background-size: cover;
+  background-size: 1600px;
+  background-repeat: no-repeat;
+  background-position: center;
 margin-left: auto;
 margin-right: auto;
 padding-top: 200px;
-padding-bottom: 280px;
+padding-bottom: 200px;
 
 }
 .hero-title {
@@ -259,7 +261,7 @@ padding: 10px 32px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
-    transition: color var(--transition-dur-and-func);
+    transition: background-color var(--transition-dur-and-func);
 
 }
 .order-button:hover,
@@ -346,7 +348,7 @@ text-align: center;
     padding: 6px 22px;
    border-radius: 4px;
     border: none;
-    transition: background-color var(--transition-dur-and-func);
+    transition: background-color var(--transition-dur-and-func), color var(--transition-dur-and-func);
 }
 .button:hover,
 .button:focus {
@@ -468,7 +470,7 @@ column-gap: 30px;
 position: relative;
 }
 .img-text-dec {
-padding-top: 27px;
+
 font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -485,6 +487,9 @@ position: absolute;
     height: 70px;
     background-color: rgba(47, 48, 58, 0.8);
     color: var(--alt-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -581,7 +586,7 @@ height: 60px;
     border-radius: 50%;
     background-color: var(--alt-color);
     fill: var(--icon-grey-color);
-    transition: fill, background-color var(--transition-dur-and-func);
+    transition: fill var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
     
 }
 .social-list-link:hover,
@@ -651,7 +656,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     padding: 63px 24px;
     background-color: rgba(33, 150, 243, 0.9);
     overflow: auto;
-   transform: translateY(100%);
+   transform: translateY(101%);
     transition: transform var(--transition-dur-and-func);
 }
 .overlay {
